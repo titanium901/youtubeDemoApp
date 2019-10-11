@@ -30,6 +30,7 @@ class ViewController: UIViewController, VideoModelDelegate {
     func dataRedy() {
         videos = videoModel.videoObject?.items
         collectionView.reloadData()
+        print(videos)
     }
     
 }
@@ -63,10 +64,11 @@ extension ViewController: UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         print(#function)
-//        if let vc = storyboard?.instantiateViewController(withIdentifier: "DetailVC") as? DetailVC {
-//            vc.rssItem = rssItems?[indexPath.item]
-//            present(vc, animated: true)
-//        }
+        if let vc = storyboard?.instantiateViewController(withIdentifier: "DetailVC") as? DetailVC {
+            vc.video = videos?[indexPath.row]
+            
+            present(vc, animated: true)
+        }
     }
 }
 

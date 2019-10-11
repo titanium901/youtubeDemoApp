@@ -20,28 +20,27 @@
                                 <rect key="frame" x="0.0" y="272" width="414" height="624"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="tQF-Jf-Heh">
-                                    <size key="itemSize" width="300" height="200"/>
-                                    <size key="estimatedItemSize" width="300" height="300"/>
+                                    <size key="itemSize" width="400" height="300"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="10" maxX="0.0" maxY="10"/>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="VideoCell" id="QZb-yY-OYc" customClass="VideoCell" customModule="YoutubeDemoApp" customModuleProvider="target">
-                                        <rect key="frame" x="57" y="10" width="300" height="300"/>
+                                        <rect key="frame" x="7" y="10" width="400" height="300"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="suS-fr-ZyS">
-                                            <rect key="frame" x="0.0" y="0.0" width="300" height="300"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="400" height="300"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ViY-VK-eUN">
-                                                    <rect key="frame" x="0.0" y="10" width="300" height="22"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ViY-VK-eUN">
+                                                    <rect key="frame" x="0.0" y="10" width="400" height="22"/>
                                                     <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="18"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="1" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pencil.circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="uTY-Bu-hAN">
-                                                    <rect key="frame" x="0.0" y="42.5" width="300" height="196"/>
+                                                    <rect key="frame" x="0.0" y="42.5" width="400" height="196"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="196.5" id="0mG-QT-ud3"/>
                                                         <constraint firstAttribute="width" constant="300" id="MbS-kR-Nr2"/>
@@ -57,7 +56,6 @@
                                                 <constraint firstItem="uTY-Bu-hAN" firstAttribute="leading" secondItem="suS-fr-ZyS" secondAttribute="leading" id="w9K-lH-yh3"/>
                                             </constraints>
                                         </collectionViewCellContentView>
-                                        <size key="customSize" width="300" height="300"/>
                                         <connections>
                                             <outlet property="videoImage" destination="uTY-Bu-hAN" id="62Y-Ba-yBj"/>
                                             <outlet property="videoTitleLabel" destination="ViY-VK-eUN" id="hsD-Em-Nd6"/>
@@ -92,6 +90,68 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="137.68115942028987" y="126.5625"/>
+        </scene>
+        <!--DetailVC-->
+        <scene sceneID="jvS-c2-f7W">
+            <objects>
+                <viewController storyboardIdentifier="DetailVC" id="qjs-c1-mjA" customClass="DetailVC" customModule="YoutubeDemoApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hMP-DK-7y0">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7eh-0J-XNC">
+                                <rect key="frame" x="0.0" y="64" width="414" height="195"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="195" id="Dhu-YM-Gan"/>
+                                </constraints>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mtj-Yd-ZQY">
+                                <rect key="frame" x="0.0" y="315" width="414" height="26.5"/>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="DiG-3Z-Sq8">
+                                <rect key="frame" x="20" y="371.5" width="374" height="400"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="400" id="6kQ-2h-pS3"/>
+                                </constraints>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-SemiBold" family="Apple SD Gothic Neo" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Mtj-Yd-ZQY" firstAttribute="trailing" secondItem="DoB-f8-mnw" secondAttribute="trailing" id="5bW-P8-05O"/>
+                            <constraint firstItem="DiG-3Z-Sq8" firstAttribute="top" secondItem="Mtj-Yd-ZQY" secondAttribute="bottom" constant="30" id="686-uL-psE"/>
+                            <constraint firstItem="DiG-3Z-Sq8" firstAttribute="leading" secondItem="DoB-f8-mnw" secondAttribute="leading" constant="20" id="GXv-4P-NLq"/>
+                            <constraint firstItem="DiG-3Z-Sq8" firstAttribute="centerX" secondItem="hMP-DK-7y0" secondAttribute="centerX" id="R0e-TA-yXk"/>
+                            <constraint firstItem="Mtj-Yd-ZQY" firstAttribute="leading" secondItem="DoB-f8-mnw" secondAttribute="leading" id="WxA-6g-zh0"/>
+                            <constraint firstItem="7eh-0J-XNC" firstAttribute="leading" secondItem="DoB-f8-mnw" secondAttribute="leading" id="bjU-2n-6u7"/>
+                            <constraint firstItem="7eh-0J-XNC" firstAttribute="top" secondItem="DoB-f8-mnw" secondAttribute="top" constant="20" id="iIl-nJ-huG"/>
+                            <constraint firstItem="DoB-f8-mnw" firstAttribute="trailing" secondItem="DiG-3Z-Sq8" secondAttribute="trailing" constant="20" id="s31-UM-Rql"/>
+                            <constraint firstItem="7eh-0J-XNC" firstAttribute="trailing" secondItem="DoB-f8-mnw" secondAttribute="trailing" id="u0A-Vw-kNw"/>
+                            <constraint firstItem="Mtj-Yd-ZQY" firstAttribute="top" secondItem="7eh-0J-XNC" secondAttribute="bottom" constant="56" id="vga-TM-oXk"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="DoB-f8-mnw"/>
+                    </view>
+                    <connections>
+                        <outlet property="descriptionText" destination="DiG-3Z-Sq8" id="6gI-07-1Qa"/>
+                        <outlet property="titleLabel" destination="Mtj-Yd-ZQY" id="4n3-lu-gxD"/>
+                        <outlet property="webView" destination="7eh-0J-XNC" id="eyw-3d-nBf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hBG-qR-yEE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="828.98550724637687" y="126.5625"/>
         </scene>
     </scenes>
     <resources>

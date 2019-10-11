@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CA7245CF235081DD0085D22D /* DetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA7245CE235081DD0085D22D /* DetailVC.swift */; };
 		CAFE3177233DF0870044F160 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAFE3176233DF0870044F160 /* AppDelegate.swift */; };
 		CAFE3179233DF0870044F160 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAFE3178233DF0870044F160 /* SceneDelegate.swift */; };
 		CAFE317B233DF0870044F160 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAFE317A233DF0870044F160 /* ViewController.swift */; };
@@ -22,6 +23,7 @@
 /* Begin PBXFileReference section */
 		8F44167497A2DB1A2B15A519 /* Pods-YoutubeDemoApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YoutubeDemoApp.release.xcconfig"; path = "Target Support Files/Pods-YoutubeDemoApp/Pods-YoutubeDemoApp.release.xcconfig"; sourceTree = "<group>"; };
 		9645DA1EA482EE122EF21AD0 /* Pods_YoutubeDemoApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YoutubeDemoApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CA7245CE235081DD0085D22D /* DetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailVC.swift; sourceTree = "<group>"; };
 		CAFE3173233DF0870044F160 /* YoutubeDemoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YoutubeDemoApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CAFE3176233DF0870044F160 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CAFE3178233DF0870044F160 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -77,6 +79,7 @@
 			isa = PBXGroup;
 			children = (
 				CAFE317A233DF0870044F160 /* ViewController.swift */,
+				CA7245CE235081DD0085D22D /* DetailVC.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -254,6 +257,7 @@
 				CAFE318B233E1C310044F160 /* VideoModel.swift in Sources */,
 				CAFE318D233E1C720044F160 /* Video.swift in Sources */,
 				CAFE3190233E42C60044F160 /* VideoCell.swift in Sources */,
+				CA7245CF235081DD0085D22D /* DetailVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
