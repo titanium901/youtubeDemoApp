@@ -11,26 +11,31 @@ import Alamofire
 import SDWebImage
 
 class ViewController: UIViewController, VideoModelDelegate {
-        
+    
+    @IBOutlet weak var logoImage: UIImageView!
+    @IBOutlet weak var collectionView: UICollectionView!
+    
     var videos: [Item]?
     var selectedVideo: Item?
     let videoModel = VideoModel()
     
-    @IBOutlet weak var collectionView: UICollectionView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        logoImage.layer.borderWidth = 1
+        logoImage.layer.borderColor = UIColor.black.cgColor
         videoModel.delegate = self
         videoModel.getFeedVideos()
     }
+    
     
     //MARK: -VideoModel Delegate Methods
     
     func dataRedy() {
         videos = videoModel.videoObject?.items
         collectionView.reloadData()
-        print(videos)
+        print(videos!)
     }
     
 }
@@ -44,6 +49,7 @@ extension ViewController: UICollectionViewDataSource {
         }
         print(#function)
         return videos.count
+
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -57,6 +63,8 @@ extension ViewController: UICollectionViewDataSource {
     }
     
     
+   
+    
 }
 
 // MARK: UICollectionViewDelegate
@@ -69,6 +77,26 @@ extension ViewController: UICollectionViewDelegate {
             
             present(vc, animated: true)
         }
+    }
+    
+    
+}
+
+// MARK: UICollectionViewDelegateFlowLayout
+extension ViewController: UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView,
+                    layout collectionViewLayout: UICollectionViewLayout,
+                    sizeForItemAt indexPath: IndexPath) -> CGSize {
+    let referenceHeight: CGFloat = 300 // Approximate height of the cell
+    // Cell width calculation
+    let sectionInset = (collectionViewLayout as! UICollectionViewFlowLayout).sectionInset
+    let referenceWidth = collectionView.safeAreaLayoutGuide.layoutFrame.width
+        - sectionInset.left
+        - sectionInset.right
+        - collectionView.contentInset.left
+        - collectionView.contentInset.right
+
+        return CGSize(width: referenceWidth, height: referenceHeight)
     }
 }
 

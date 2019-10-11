@@ -9,8 +9,9 @@
 import UIKit
 import WebKit
 
-class DetailVC: UIViewController {
+class DetailVC: UIViewController, WKUIDelegate {
     
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     @IBOutlet weak var webView: WKWebView!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var descriptionText: UITextView!
@@ -21,15 +22,24 @@ class DetailVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        webView.navigationDelegate = self
+        
         if let item = video {
             titleLabel.text = item.snippet.title
             descriptionText.text = item.snippet.snippetDescription
-            let width = self.view.frame.width
-            let height = self.view.frame.height
-            let videoEmbedString = "<html><head><style type=\"text/css\">body {background-color: transparent;color: white;}</style></head><body style=\"margin:0\"><iframe frameBorder=\"0\" height=\"180\" width=\"320\" src=\"http://www.youtube.com/embed/" + item.snippet.resourceID.videoID + "?showinfo=0&modestbranding=1&frameborder=0&rel=0\"></iframe></body></html>"
-            webView.loadHTMLString(videoEmbedString, baseURL: nil)
+            if let url = URL(string: "http://www.youtube.com/embed/\(item.snippet.resourceID.videoID)") {
+                webView.load(URLRequest(url: url))
+            }
+            
         }
     }
 
 
+}
+
+extension DetailVC: WKNavigationDelegate {
+    func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
+        activityIndicator.stopAnimating()
+        activityIndicator.isHidden = true
+    }
 }

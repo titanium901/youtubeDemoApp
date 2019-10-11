@@ -7,13 +7,6 @@
 //
 
 import Foundation
-//
-//class Video: NSObject {
-//    var videoId: String = ""
-//    var videoTitle: String = ""
-//    var videoDescription: String = ""
-//    var videoThumbnailUrl: String = ""
-//}
 
 // MARK: - Video
 struct Video: Codable {
