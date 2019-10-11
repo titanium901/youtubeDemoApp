@@ -77,10 +77,15 @@
                                     <constraint firstAttribute="width" constant="75" id="7ZK-X5-X0a"/>
                                 </constraints>
                             </imageView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="5a9-14-NH1">
+                                <rect key="frame" x="188.5" y="429.5" width="37" height="37"/>
+                                <color key="color" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="gXD-8B-DiT" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="0IW-9P-BZJ"/>
+                            <constraint firstItem="5a9-14-NH1" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="0v7-TD-uL5"/>
                             <constraint firstItem="9Zf-f6-p30" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="296-HF-R0h"/>
                             <constraint firstItem="9Zf-f6-p30" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="8Cs-j9-JO6"/>
                             <constraint firstItem="gXD-8B-DiT" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="CzL-8h-4IM"/>
@@ -89,10 +94,12 @@
                             <constraint firstItem="qVJ-lb-tKP" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="UA1-uW-fsJ"/>
                             <constraint firstItem="gXD-8B-DiT" firstAttribute="top" secondItem="qVJ-lb-tKP" secondAttribute="bottom" constant="8" id="biN-N1-3VX"/>
                             <constraint firstAttribute="bottom" secondItem="gXD-8B-DiT" secondAttribute="bottom" id="lWW-bb-KQd"/>
+                            <constraint firstItem="5a9-14-NH1" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="o08-2K-0LD"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="activityIndicator" destination="5a9-14-NH1" id="GKJ-3e-thf"/>
                         <outlet property="collectionView" destination="gXD-8B-DiT" id="Q8e-RQ-obX"/>
                         <outlet property="logoImage" destination="qVJ-lb-tKP" id="3R2-mq-dLU"/>
                     </connections>

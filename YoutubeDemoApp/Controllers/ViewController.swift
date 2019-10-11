@@ -12,6 +12,7 @@ import SDWebImage
 
 class ViewController: UIViewController, VideoModelDelegate {
     
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     @IBOutlet weak var logoImage: UIImageView!
     @IBOutlet weak var collectionView: UICollectionView!
     
@@ -34,6 +35,8 @@ class ViewController: UIViewController, VideoModelDelegate {
     
     func dataRedy() {
         videos = videoModel.videoObject?.items
+        activityIndicator.stopAnimating()
+        activityIndicator.isHidden = true
         collectionView.reloadData()
         print(videos!)
     }

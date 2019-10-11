@@ -23,11 +23,10 @@ class VideoModel: NSObject {
     
     func getFeedVideos() {
         
-        AF.request("https://www.googleapis.com/youtube/v3/playlistItems", method: .get, parameters: ["part": "snippet", "maxResults": "10", "playlistId": "UUt7sv-NKh44rHAEb-qCCxvA", "key": API_KEY], encoder: URLEncodedFormParameterEncoder.default, headers: nil, interceptor: nil).responseJSON { (response) in
+        AF.request("https://www.googleapis.com/youtube/v3/playlistItems", method: .get, parameters: ["part": "snippet", "maxResults": "40", "playlistId": "UUt7sv-NKh44rHAEb-qCCxvA", "key": API_KEY], encoder: URLEncodedFormParameterEncoder.default, headers: nil, interceptor: nil).responseJSON { (response) in
             
             switch response.result {
             case .success:
-                print("yes")
                 if let jsonData = response.data {
                     let jsonDecoder = JSONDecoder()
                     do {
