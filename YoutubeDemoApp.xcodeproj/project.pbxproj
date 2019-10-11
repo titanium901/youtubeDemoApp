@@ -65,6 +65,22 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		CA7245CC2350770C0085D22D /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				CAFE318A233E1C310044F160 /* VideoModel.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		CA7245CD235077180085D22D /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				CAFE317A233DF0870044F160 /* ViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
 		CAFE316A233DF0870044F160 = {
 			isa = PBXGroup;
 			children = (
@@ -88,8 +104,8 @@
 			children = (
 				CAFE3176233DF0870044F160 /* AppDelegate.swift */,
 				CAFE3178233DF0870044F160 /* SceneDelegate.swift */,
-				CAFE317A233DF0870044F160 /* ViewController.swift */,
-				CAFE318A233E1C310044F160 /* VideoModel.swift */,
+				CA7245CD235077180085D22D /* Controllers */,
+				CA7245CC2350770C0085D22D /* Network */,
 				CAFE318E233E41F50044F160 /* View */,
 				CAFE3191233E42DC0044F160 /* Model */,
 				CAFE317F233DF0870044F160 /* Assets.xcassets */,

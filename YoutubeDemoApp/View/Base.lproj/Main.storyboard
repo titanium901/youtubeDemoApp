@@ -16,44 +16,48 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="gXD-8B-DiT">
-                                <rect key="frame" x="0.0" y="216" width="414" height="680"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="gXD-8B-DiT">
+                                <rect key="frame" x="0.0" y="272" width="414" height="624"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="tQF-Jf-Heh">
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="tQF-Jf-Heh">
                                     <size key="itemSize" width="300" height="200"/>
+                                    <size key="estimatedItemSize" width="300" height="300"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="10" maxX="0.0" maxY="10"/>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="VideoCell" id="QZb-yY-OYc" customClass="VideoCell" customModule="YoutubeDemoApp" customModuleProvider="target">
-                                        <rect key="frame" x="57" y="10" width="300" height="200"/>
+                                        <rect key="frame" x="57" y="10" width="300" height="300"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="U6k-2V-XOy">
-                                            <rect key="frame" x="0.0" y="0.0" width="300" height="200"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="suS-fr-ZyS">
+                                            <rect key="frame" x="0.0" y="0.0" width="300" height="300"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="1" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="uTY-Bu-hAN">
-                                                    <rect key="frame" x="0.0" y="2.5" width="300" height="196"/>
-                                                </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ViY-VK-eUN">
-                                                    <rect key="frame" x="129" y="26" width="42" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <rect key="frame" x="0.0" y="10" width="300" height="22"/>
+                                                    <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="18"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="1" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pencil.circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="uTY-Bu-hAN">
+                                                    <rect key="frame" x="0.0" y="42.5" width="300" height="196"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="196.5" id="0mG-QT-ud3"/>
+                                                        <constraint firstAttribute="width" constant="300" id="MbS-kR-Nr2"/>
+                                                    </constraints>
+                                                </imageView>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="uTY-Bu-hAN" firstAttribute="leading" secondItem="U6k-2V-XOy" secondAttribute="leading" id="5FC-3F-EXv"/>
-                                                <constraint firstAttribute="bottom" secondItem="uTY-Bu-hAN" secondAttribute="bottom" id="HY1-VC-oWi"/>
-                                                <constraint firstAttribute="trailing" secondItem="uTY-Bu-hAN" secondAttribute="trailing" id="I1q-Mp-oWz"/>
-                                                <constraint firstItem="ViY-VK-eUN" firstAttribute="leading" secondItem="U6k-2V-XOy" secondAttribute="leading" id="VIr-5I-3zN"/>
-                                                <constraint firstItem="ViY-VK-eUN" firstAttribute="top" secondItem="U6k-2V-XOy" secondAttribute="top" constant="26" id="XrY-Nl-QeT"/>
-                                                <constraint firstItem="uTY-Bu-hAN" firstAttribute="top" secondItem="U6k-2V-XOy" secondAttribute="top" id="eOC-gS-sIi"/>
-                                                <constraint firstAttribute="trailing" secondItem="ViY-VK-eUN" secondAttribute="trailing" id="yaA-ju-d3O"/>
+                                                <constraint firstItem="ViY-VK-eUN" firstAttribute="top" secondItem="suS-fr-ZyS" secondAttribute="top" constant="10" id="R8x-KO-AKB"/>
+                                                <constraint firstAttribute="trailing" secondItem="ViY-VK-eUN" secondAttribute="trailing" id="So0-4G-aCO"/>
+                                                <constraint firstAttribute="trailing" secondItem="uTY-Bu-hAN" secondAttribute="trailing" id="XTP-ok-Vtj"/>
+                                                <constraint firstItem="ViY-VK-eUN" firstAttribute="leading" secondItem="suS-fr-ZyS" secondAttribute="leading" id="YFT-JP-fCn"/>
+                                                <constraint firstItem="uTY-Bu-hAN" firstAttribute="top" secondItem="ViY-VK-eUN" secondAttribute="bottom" constant="10" id="cDH-8Z-56w"/>
+                                                <constraint firstItem="uTY-Bu-hAN" firstAttribute="leading" secondItem="suS-fr-ZyS" secondAttribute="leading" id="w9K-lH-yh3"/>
                                             </constraints>
                                         </collectionViewCellContentView>
+                                        <size key="customSize" width="300" height="300"/>
                                         <connections>
                                             <outlet property="videoImage" destination="uTY-Bu-hAN" id="62Y-Ba-yBj"/>
                                             <outlet property="videoTitleLabel" destination="ViY-VK-eUN" id="hsD-Em-Nd6"/>
@@ -65,8 +69,20 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="NYs-R8-gQe"/>
                                 </connections>
                             </collectionView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logoWylsa" translatesAutoresizingMaskIntoConstraints="NO" id="qVJ-lb-tKP">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="264"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="gXD-8B-DiT" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="0IW-9P-BZJ"/>
+                            <constraint firstItem="gXD-8B-DiT" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="CzL-8h-4IM"/>
+                            <constraint firstItem="qVJ-lb-tKP" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Dbz-Wy-Zds"/>
+                            <constraint firstItem="qVJ-lb-tKP" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="L5D-D2-2bp"/>
+                            <constraint firstItem="qVJ-lb-tKP" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="UA1-uW-fsJ"/>
+                            <constraint firstItem="gXD-8B-DiT" firstAttribute="top" secondItem="qVJ-lb-tKP" secondAttribute="bottom" constant="8" id="biN-N1-3VX"/>
+                            <constraint firstAttribute="bottom" secondItem="gXD-8B-DiT" secondAttribute="bottom" id="lWW-bb-KQd"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
@@ -78,4 +94,8 @@
             <point key="canvasLocation" x="137.68115942028987" y="126.5625"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="logoWylsa" width="1074" height="264"/>
+        <image name="pencil.circle.fill" catalog="system" width="64" height="62"/>
+    </resources>
 </document>

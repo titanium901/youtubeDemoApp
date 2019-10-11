@@ -28,11 +28,8 @@ class ViewController: UIViewController, VideoModelDelegate {
     //MARK: -VideoModel Delegate Methods
     
     func dataRedy() {
-        print(#function)
         videos = videoModel.videoObject?.items
         collectionView.reloadData()
-        
-        
     }
     
 }
@@ -52,7 +49,9 @@ extension ViewController: UICollectionViewDataSource {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "VideoCell", for: indexPath) as! VideoCell
         let video = videos?[indexPath.row].snippet
         cell.videoTitleLabel.text = video?.title
-        
+        if let url = video?.thumbnails.maxres.url {
+            cell.videoImage.sd_setImage(with: URL(string: url))
+        }
         return cell
     }
     
